@@ -1,6 +1,6 @@
 import {
     runAppHandler,
-    noMatchHandler
+    noMatchHandler, HelpHandler
 } from './handlers';
 import { createSaluteRequest, createSaluteResponse, createScenarioWalker, createSystemScenario, createUserScenario, NLPRequest, NLPResponse, SaluteRequest, createIntents, createMatchers } from '@salutejs/scenario'
 import { SaluteMemoryStorage } from '@salutejs/storage-adapter-memory'
@@ -11,7 +11,10 @@ const intents = createIntents(model.intents)
 const { intent, action, regexp } = createMatchers<SaluteRequest, typeof intents>();
 
 const userScenario = createUserScenario({
-
+    help: {
+        match: intent('/Help'),
+        handle: HelpHandler
+    }
 })
 
 const systemScenario = createSystemScenario({
@@ -20,7 +23,7 @@ const systemScenario = createSystemScenario({
 })
 
 const scenarioWalker = createScenarioWalker({
-    recognizer: new SmartAppBrainRecognizer("2e3e3dab-34c6-4426-bb35-a920341ec732"),
+    recognizer: new SmartAppBrainRecognizer("f5559b6c-ba0b-4962-96cb-0d55076665f8"),
     intents,
     userScenario,
     systemScenario

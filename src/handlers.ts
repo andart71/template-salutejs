@@ -1,12 +1,23 @@
 import { SaluteHandler } from '@salutejs/scenario'
+import * as dictionary from './system.i18n'
 
+//Хэндлер для RUN_APP
 export const runAppHandler: SaluteHandler = ({ res, req }) => {
+    const keyset = req.i18n(dictionary)
+    res.appendBubble(keyset('start'))
     res.appendSuggestions(['Хватит'])
-    res.setPronounceText('Приближается самый страшный праздник в году!')
-    console.log('runapp handler')
 }
+
+//Хэндлер для NoMatch
 export const noMatchHandler: SaluteHandler = ({ res , req}) => {
+    const keyset = req.i18n(dictionary)
+    res.appendBubble(keyset('nomatch'))
     res.appendSuggestions(['Хватит'])
-    res.setPronounceText('Я могу рассказать страшные истории, интересные факты или о том, как появился хэллоуин, а также ответить на частые вопросы про этот праздник')
-    console.log('nomatch handler')
+    }
+
+    //Хэндлер для Помощь
+export const HelpHandler: SaluteHandler = ({res, req}) => {
+    const keyset = req.i18n(dictionary)
+    res.appendBubble(keyset('help'))
+    res.appendSuggestions(['Хватит'])
 }
