@@ -1,10 +1,7 @@
-
-import { Router } from 'express'
-import { handleNlpRequest } from './src/scenario'
-
-export const apiHookRout = Router()
-
-apiHookRout.post('/api/hook', async (req, res) => {
-    console.log('api/hook request')
-    res.status(200).json(await handleNlpRequest(req.body))
-})
+import express from 'express'
+import cors from 'cors'
+import {apiHookRout } from './src/routes'
+const app = express()
+app.use(express.json())
+app.use(cors())
+app.use(apiHookRout)
