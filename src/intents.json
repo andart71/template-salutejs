@@ -1,0 +1,209 @@
+{
+  "intents": {
+    "/Help": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "помощь"
+        },
+        {
+          "type": "phrase",
+          "rule": "что ты умеешь"
+        },
+        {
+          "type": "phrase",
+          "rule": "help"
+        }
+      ],
+      "variables": {}
+    },
+    "/History": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "история"
+        }
+      ],
+      "variables": {}
+    },
+    "/Horror": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "страшилка"
+        },
+        {
+          "type": "phrase",
+          "rule": "страшилки"
+        }
+      ],
+      "variables": {}
+    },
+    "/пока": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "пока"
+        }
+      ],
+      "variables": {}
+    },
+    "/привет": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "привет"
+        }
+      ],
+      "variables": {}
+    },
+    "/Facts": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "факты"
+        },
+        {
+          "type": "pattern",
+          "rule": "  * факты *"
+        }
+      ],
+      "variables": {}
+    },
+    "/More": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "ещё"
+        },
+        {
+          "type": "phrase",
+          "rule": "расскажи ещё"
+        },
+        {
+          "type": "phrase",
+          "rule": "давай ещё"
+        },
+        {
+          "type": "phrase",
+          "rule": "ещё одну"
+        },
+        {
+          "type": "phrase",
+          "rule": "дальше"
+        },
+        {
+          "type": "phrase",
+          "rule": "следующая"
+        },
+        {
+          "type": "phrase",
+          "rule": "следующий"
+        },
+        {
+          "type": "phrase",
+          "rule": "новая"
+        },
+        {
+          "type": "phrase",
+          "rule": "новый"
+        }
+      ],
+      "variables": {}
+    },
+    "/Horror/MoreHorror": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "ещё"
+        },
+        {
+          "type": "phrase",
+          "rule": "давай ещё"
+        },
+        {
+          "type": "phrase",
+          "rule": "расскажи ещё "
+        }
+      ],
+      "variables": {}
+    },
+    "/WhoSymbol": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "почему символ тыква"
+        },
+        {
+          "type": "phrase",
+          "rule": "почему тыква"
+        },
+        {
+          "type": "phrase",
+          "rule": "почему тыква символ праздника"
+        },
+        {
+          "type": "phrase",
+          "rule": "почему тыква символ хэллоуина"
+        }
+      ],
+      "variables": {}
+    },
+    "/WhoName": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "откуда пошло название"
+        },
+        {
+          "type": "phrase",
+          "rule": "почему такое название"
+        },
+        {
+          "type": "phrase",
+          "rule": "почему называется halloween"
+        },
+        {
+          "type": "phrase",
+          "rule": "почему halloween"
+        }
+      ],
+      "variables": {}
+    },
+    "/WhyOctober": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "почему празднуют 31 октября"
+        },
+        {
+          "type": "phrase",
+          "rule": "почему 31 октября"
+        },
+        {
+          "type": "phrase",
+          "rule": "почему в октябре"
+        }
+      ],
+      "variables": {}
+    },
+    "/WhyAbout": {
+      "matchers": [
+        {
+          "type": "phrase",
+          "rule": "в чем суть праздника"
+        },
+        {
+          "type": "phrase",
+          "rule": "в чем суть"
+        },
+        {
+          "type": "phrase",
+          "rule": "почему празднуют"
+        }
+      ],
+      "variables": {}
+    }
+  },
+  "entities": {}
+}
